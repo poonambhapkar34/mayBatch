@@ -390,9 +390,41 @@ console.log('tiger',tiger);
 
 //regular Expressions 
 
-let text = 'visit our MumbaiM';
-let indexOfText = text.match(/i/m);
+let text = 'visitM500 ourM MumbaiM 1203';
+  let indexOfText = text.match(/\d3$/g);
 console.log('indexOfText',indexOfText);
+
+var student = { 
+  name:'jay',
+  age:'21',
+  class:'12'
+}
+console.log('student-->',student);
+let stringyfiedData= JSON.stringify(student);
+console.log('stringyfiedData-->',stringyfiedData);
+
+let parsedData= JSON.parse(stringyfiedData)
+console.log('parsedData-->',parsedData);
+
+localStorage.setItem('student',stringyfiedData)
+let studentData=JSON.parse(localStorage.getItem('student'))
+console.log(studentData.name);
+//document.getElementById() id='para' name='gender'
+
+function changeColor(value){
+ let data = document.getElementById("paraElem");
+ data.style.backgroundColor = value;
+}
+
+let array=[8,10,12,5,1,6];
+let array2 = array.map((ele)=>ele*2)
+let array3 = array.forEach((ele)=>ele*2)
+console.log(array3);
+console.log(array2);
+//\d :digit 
+// ^[a-z]$
+
+
 //i :case insensitive
 // [0-7]
 // ^[abcd]$
@@ -482,5 +514,7 @@ console.log('indexOfText',indexOfText);
 // console.log(array.length);
 
 
-
+function focus(){
+console.log('focus');
+}
 
