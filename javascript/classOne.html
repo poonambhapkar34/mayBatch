@@ -1,2 +1,21 @@
-<script src="D:/mayBatch/mayBatch/javascript/classOne.js"></script>
-<button onclick="studentsName()">clickme</button>
+<!-- <script src="D:/mayBatch/mayBatch/javascript/classOne.js"></script>
+<button onclick="Student.studentsName()">clickme</button> -->
+<p id="para">we are Classes</p>
+<script>
+class Student{
+    constructor(name,surname){
+    this.fistname = name;
+    this.surname = surname;
+} 
+
+studentsName(){
+  //return console.log(this.fistname);
+  return document.write(this.fistname)
+}
+
+}
+
+let stdData = new Student('jay','patil')
+document.getElementById('para').innerHTML= stdData.studentsName()
+
+</script>
