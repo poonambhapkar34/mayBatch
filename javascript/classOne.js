@@ -1,8 +1,7 @@
-//class name:Student{}
+
 class Student{
 
 constructor(){
-
 }
 
  studentsName(){
@@ -14,24 +13,5 @@ constructor(){
 StudentNew(){
     console.log( this.studentsName() ); 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

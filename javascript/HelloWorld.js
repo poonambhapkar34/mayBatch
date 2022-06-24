@@ -411,16 +411,62 @@ let studentData=JSON.parse(localStorage.getItem('student'))
 console.log(studentData.name);
 //document.getElementById() id='para' name='gender'
 
-function changeColor(value){
- let data = document.getElementById("paraElem");
- data.style.backgroundColor = value;
+function changeColor(value) {
+  let data = document.getElementById("paraElem");
+  data.style.backgroundColor = value;
+
+  console.log("value-->", value);
+
+  setInterval(() => {
+    console.log('i am inside set timeout');
+
+  }, 3000);
+
+  console.log('aftersetTimeOut', value);
+
+
 }
+
+let para = 'poonam-patil';
+let splitedArray = para.split('-')
+console.log('splitedArray[1]',splitedArray[1]);
+console.log('splitedArray',splitedArray);
+
+
 
 let array=[8,10,12,5,1,6];
 let array2 = array.map((ele)=>ele*2)
 let array3 = array.forEach((ele)=>ele*2)
 console.log(array3);
 console.log(array2);
+
+let chars = ['a','b','c','d','a','b', 'a','b','c']
+
+let newArray= [...new Set(chars)]
+console.log("newArray",newArray);
+console.log(chars.indexOf(2));
+ chars.forEach((ele,index)=> {
+  console.log(ele +' '+ index +' '+ chars.indexOf(ele));
+ })
+
+ let newA = chars.filter((ele,ind)=>{
+ return chars.indexOf(ele)==ind;
+ })
+ console.log(newA);
+
+ let includeArray = []
+
+chars.forEach((ele)=>{
+  if(includeArray.includes(ele)){
+    
+  }
+  else{
+    includeArray.push(ele)
+  }
+})
+console.log('includeArray',includeArray);
+
+
 //\d :digit 
 // ^[a-z]$
 
